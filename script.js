@@ -1,10 +1,10 @@
-console.log(`Escoffier`);
-
 const form = document.querySelector('.manage-footer__form')
 const emailInput = document.querySelector('.manage-footer__input')
 const emailError = document.querySelector('.manage-footer__email-error')
 const smallBtnDots = document.querySelectorAll('.dot');
 const cards = document.querySelectorAll(".testimonials-card");
+const hamburger = document.querySelector(".manage-header__hamburger");
+const nav = document.querySelector(".manage-header__nav");
 
 
 // Form validation
@@ -37,4 +37,11 @@ smallBtnDots.forEach((dot, index) => {
         // Show the clicked card
         cards[index].classList.add("active");
     });
+});
+
+
+// Hamburger menu functionality
+hamburger.addEventListener("click", () => {
+
+    nav.classList.toggle("mobile-open");
 });
